@@ -1,0 +1,43 @@
+name: Check that book builds properly
+
+on:
+  push:
+    branches:
+      - cs-main
+      - cs-develop
+      - feature/workflows
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-20.04
+    timeout-minutes: 30
+
+    steps:
+    - uses: actions/setup-python@v2
+      with:
+           python-version: '3.10'
+           architecture: 'x64'
+    - name: Build runestone server container
+      run: |
+        cd /home/runner/
+        curl -o /home/runner/docker_tools.py https://raw.githubusercontent.com/RunestoneInteractive/RunestoneServer/master/docker/docker_tools.py
+        python3 /home/runner/docker_tools.py build --single
+    - name: Start runestone server stack
+      run: |
+        cd /home/runner/RunestoneServer/
+        docker-compose -f /home/runner/RunestoneServer/docker-compose.yml up -d
+    - name: List containers
+      run: docker ps -a
+    - name: Install rsmanage
+      run: |
+        pip3 install -e /home/runner/RunestoneServer/rsmanage
+    - name: Clone cpp4python into runestone server books directory
+      run: |
+        git clone -b feature/workflows https://github.com/Colorado-CompSci-Ugrad/cpp4python.git /home/runner/RunestoneServer/books/cpp4python
+    - name: Attempt to build book
+      run: |
+        docker ps -a
+        docker exec runestoneserver_runestone_1 bash -c "source \$RUNESTONE_PATH/.venv/bin/activate; 'rsmanage' 'addcourse' '--course-name' 'cpp4python2' '--basecourse' 'cpp4python'"
+        docker exec runestoneserver_runestone_1 bash -c "source \$RUNESTONE_PATH/.venv/bin/activate; 'rsmanage' 'build' '--course' 'cpp4python'"
