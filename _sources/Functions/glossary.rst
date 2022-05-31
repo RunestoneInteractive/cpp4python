@@ -17,9 +17,6 @@ Glossary
     function
         a section of code that performs a procedure and is usually named.
 
-    overloading
-        specifying more than one definition for the same function name or the same operator within the same scope.
-
     parameter
         a variable in a function or method definition that accepts data passed from an argument.
 

@@ -29,9 +29,11 @@ By Jan Pearce, Berea College and Brad Miller, Runestone
    AtomicData/toctree.rst
    Control_Structures/toctree.rst
    Functions/toctree.rst
+   Aggregates/toctree.rst
+   DynamicMemory/toctree.rst
    CollectionData/toctree.rst
    Input_and_Output/toctree.rst
-   Exception_Handling/toctree.rst
+   AdvancedTopics/toctree.rst
    Turtles/toctree.rst
 
 Acknowledgements
