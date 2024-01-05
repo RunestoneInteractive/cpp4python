@@ -195,7 +195,7 @@ and logical operators with examples shown in the session that follows.
           greater than or equal     :math:`>=`                                 Greater than or equal to operator
                           equal     :math:`==`                                                 Equality operator
                       not equal     :math:`!=`                                                Not equal operator
-                    logical and     :math:`&&`                          Both operands true for result to be true
+                    logical and           `&&`                          Both operands true for result to be true
                      logical or     :math:`||`        One or the other operand is true for the result to be true
                     logical not      :math:`!`   Negates the truth value, false becomes true, true becomes false
     =========================== ============== =================================================================
@@ -270,8 +270,8 @@ Consider the following session:
         return 0;
     }
 
-The declaration ``int theSum = 0;`` creates a variable called
-``theSum`` and initializes it to hold the data value of ``0``.
+The declaration ``int theSum = 4;`` creates a variable called
+``theSum`` and initializes it to hold the data value of ``4``.
 As in Python, the right-hand side of each assignment
 statement is evaluated and the resulting data value is
 “assigned” to the variable named on the left-hand side.
@@ -700,7 +700,7 @@ On the first iteration of the loop, it is assigned the value of
             int *ptrx = &x;
 
             while (ptrx) {
-                cout << "Pointer ptrx points to " << &ptrx << endl;
+                cout << "Pointer ptrx points to " << ptrx << endl;
                 ptrx = nullptr;
             }
 

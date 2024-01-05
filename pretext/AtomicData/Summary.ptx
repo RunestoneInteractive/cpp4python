@@ -1,5 +1,5 @@
 <section xml:id="atomicdata_atomicdata_atomic-data_summary">
-        <title>Summary</title>
+        <title>Summary &amp; Reading Questions</title>
         <p><ol label="1">
             <li>
                 <p>All variables must be declared before use in C++.</p>
@@ -17,5 +17,129 @@
                 <p>Pointers are a type of variable that stores a memory address. To declare a pointer, an  <c>*</c> is used before the variable name that is supposed to store the location.</p>
             </li>
         </ol></p>
+        <reading-questions xml:id="rqs-summary2">
+            <exercise label = "summary-m">
+                <statement>
+
+                    <p>If I want to use the <c>char</c> type in C++, what set of symbols must be used?</p>
+            
+                    </statement>
+            <choices>
+                        <choice correct="yes">
+                            <statement>
+                                <p>' '</p>
+                            </statement>
+                            <feedback>
+                                <p>Good job!</p>
+
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>" "</p>
+                            </statement>
+                            <feedback>
+                                <p>No, double quotes are only used for string.</p>
+
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>' ' or " " may be used</p>
+                            </statement>
+                            <feedback>
+                                <p>No. Only one set of symbols may be used.</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>It depends upon the implementation.</p>
+                            </statement>
+                            <feedback>
+                                <p>No. The implementation is consistent.</p>
+                            </feedback>
+                        </choice>
+            
+                        <choice>
+                            <statement>
+                                <p>none of the above</p>
+                            </statement>
+                            <feedback>
+                                <p>One of the above is indeed correct.</p>
+                            </feedback>
+                        </choice>
+            </choices>            
+            </exercise>
+            <exercise label = "summary-f1">
+                <statement>
+        <p>A/an<var/> is used to store a memory address in C++? </p></statement><setup><var>
+        <condition string="pointer"><feedback><p>Right! Good job!</p></feedback></condition>
+        <condition string="variable"><feedback><p>Be more specific!</p> </feedback></condition>
+        <condition string="reference"><feedback><p>That's Python, not C++!</p> </feedback></condition>
+        <condition string="^\s*default\s*$"><feedback><p>Incorrect. Please try again.</p></feedback></condition></var></setup>
+    </exercise> 
+    <exercise label = "summary-m1">
+        <statement>
+
+            <p>How may one reference a variable’s memory address in C++?</p>
+    
+            </statement>
+    <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>using ``&amp;``</p>
+                    </statement>
+                    <feedback>
+                        <p>Right! ``&amp;`` is the "address-of" operator, used to reference an address.</p>
+
+                    </feedback>
+                </choice>
+    
+                <choice>
+                    <statement>
+                        <p>using ``*``</p>
+                    </statement>
+                    <feedback>
+                        <p>No. ``int *p;`` defines a pointer to an integer, and ``*p`` would dereference that pointer, i.e. retrieve the data that p points to.</p>
+
+                    </feedback>
+                </choice>
+    
+                <choice>
+                    <statement>
+                        <p>using ``id``</p>
+                    </statement>
+                    <feedback>
+                        <p>No. This is used in Python.</p>
+                    </feedback>
+                </choice>
+    
+                <choice>
+                    <statement>
+                        <p>It depends upon the implementation.</p>
+                    </statement>
+                    <feedback>
+                        <p>No. Try again.</p>
+                    </feedback>
+                </choice>
+    
+                <choice>
+                    <statement>
+                        <p>none of the above</p>
+                    </statement>
+                    <feedback>
+                        <p>One of the above is indeed correct.</p>
+                    </feedback>
+                </choice>
+    </choices>            
+    </exercise>
+    <exercise label="matching_ch2">     
+        <statement><p> Drag each glossary term to its' corresponding definition. (Note: none of the data types are in this matching, but they are in the glossary)</p></statement>
+        <feedback><p>Feedback shows incorrect matches.</p></feedback>
+    <matches><match order="1"><premise>address-of</premise><response>(&amp;) is used to access the memory address of a C++ variable.</response></match><match order="2"><premise>atomic data type</premise><response> Data type that cannot be broken down into any simpler data elements.</response></match><match order="3"><premise>dereference</premise><response>Reads data in a pointers memory location.</response></match><match order="4"><premise>pointer</premise><response>Variables that store and manipulate memory addresses.</response></match></matches></exercise>   
+        </reading-questions>
     </section>
     

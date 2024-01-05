@@ -327,7 +327,7 @@ and to name this memory location ``num.``
 Then whatever the user types in will be stored in the ``num`` variable.
 Using the ``cout`` function, we can write instructions that will prompt the user to enter data and then
 incorporate that data into further processing.
-For example, in the code above, the integer input is doubled and then displayed!
+For example, in the code above, the floating point number is doubled and then displayed!.
 
 We will talk more about type declarations in the section on data types, and
 we will go into more depth on input and output later when we discuss
@@ -391,10 +391,10 @@ Check yourself
   :answer_a: True
   :answer_b: False
   :correct: b
-  :feedback_a: Sorry, both languages do support multi-line comments, but they look different.
-  :feedback_b: Right!  Python uses triple quotes while in C++ they begin with /* and end with */.
+  :feedback_a: Sorry, multi-line comments are possible in both languages, but they look different.
+  :feedback_b: Right!  In C++ multiline comments begin with /* and end with */. In Python, one could use a triple quoted string.
   
-   True or False: Both Python and C++ support multi-line comments. In C++, they begin with ``/*`` and end with ``*/``.
+   True or False: In both Python and C++, multi-line comments begin with ``/*`` and end with ``*/``.
 
 .. mchoice:: mc_comment_out
    :answer_a: cout x;
@@ -402,10 +402,10 @@ Check yourself
    :answer_c: print x;
    :answer_d: none of the above
    :correct: d
-   :feedback_a: Partically right. The object cout stands for character output and you need it, but you will also need to use the insertion operator <<.
+   :feedback_a: Partially right. The object cout stands for character output and you need it, but you will also need to use the insertion operator <<.
    :feedback_b: No, output is not a C++ command or object.
    :feedback_c: No, print is a Python command, but is not used in C++.
-   :feedback_d: The correct statement would be "cout << x;" or "std:cout x;" but the insertion operator is certainly needed.
+   :feedback_d: The correct statement would be "cout << x;" or "std:cout << x;" but the insertion operator is certainly needed.
 
    Given a variable called x. What statement will print the contents of x?
 

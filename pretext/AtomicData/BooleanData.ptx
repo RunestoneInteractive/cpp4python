@@ -14,7 +14,7 @@
             , and <q>not</q> is given by <c>!</c>.
             Note that the internally stored values representing <c>true</c> and <c>false</c>
             are actually <c>1</c> and <c>0</c> respectively. Hence, we see this in output as well.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+        <TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="logical_1cpp" interactive="activecode" language="cpp">
         <input>
@@ -44,9 +44,9 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>Boolean data objects are also used as results for comparison operators
-            such as equality (==) and greater than (<math>&gt;</math>). In addition,
+            such as equality (==) and greater than (<m>&gt;</m>). In addition,
             relational operators and logical operators can be combined together to
             form complex logical questions. <xref ref="atomic-data_id1"/> shows the relational
             and logical operators with examples shown in the session that follows.</p>
@@ -76,7 +76,7 @@ main()
                             less than
                         </cell>
                         <cell>
-                            <math>&lt;</math>
+                            <m>&lt;</m>
                         </cell>
                         <cell>
                             Less than operator
@@ -87,7 +87,7 @@ main()
                             greater than
                         </cell>
                         <cell>
-                            <math>&gt;</math>
+                            <m>&gt;</m>
                         </cell>
                         <cell>
                             Greater than operator
@@ -98,7 +98,7 @@ main()
                             less than or equal
                         </cell>
                         <cell>
-                            <math>&lt;=</math>
+                            <m>&lt;=</m>
                         </cell>
                         <cell>
                             Less than or equal to operator
@@ -109,7 +109,7 @@ main()
                             greater than or equal
                         </cell>
                         <cell>
-                            <math>&gt;=</math>
+                            <m>&gt;=</m>
                         </cell>
                         <cell>
                             Greater than or equal to operator
@@ -120,7 +120,7 @@ main()
                             equal
                         </cell>
                         <cell>
-                            <math>==</math>
+                            <m>==</m>
                         </cell>
                         <cell>
                             Equality operator
@@ -131,7 +131,7 @@ main()
                             not equal
                         </cell>
                         <cell>
-                            <math>!=</math>
+                            <m>!=</m>
                         </cell>
                         <cell>
                             Not equal operator
@@ -142,7 +142,7 @@ main()
                             logical and
                         </cell>
                         <cell>
-                            <math>&amp;&amp;</math>
+                            &amp;&amp;
                         </cell>
                         <cell>
                             Both operands true for result to be true
@@ -153,7 +153,7 @@ main()
                             logical or
                         </cell>
                         <cell>
-                            <math>||</math>
+                            <m>||</m>
                         </cell>
                         <cell>
                             One or the other operand is true for the result to be true
@@ -164,7 +164,7 @@ main()
                             logical not
                         </cell>
                         <cell>
-                            <math>!</math>
+                            <m>!</m>
                         </cell>
                         <cell>
                             Negates the truth value, false becomes true, true becomes false
@@ -173,7 +173,7 @@ main()
                 
             
         </tabular></table>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+        <TabNode tabname="C++" tabnode_options="{'subchapter': 'BooleanData', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="locicalcpp" interactive="activecode" language="cpp">
         <input>
@@ -205,7 +205,7 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>When a C++ variable is declared, space in memory is set aside to hold
             this type of value.
             A C++ variable can optionally be initialized in the declaration by
@@ -238,8 +238,8 @@ int main(){
 }
         </input>
     </program>
-        <p>The declaration <c>int theSum = 0;</c> creates a variable called
-            <c>theSum</c> and initializes it to hold the data value of <c>0</c>.
+        <p>The declaration <c>int theSum = 4;</c> creates a variable called
+            <c>theSum</c> and initializes it to hold the data value of <c>4git</c>.
             As in Python, the right-hand side of each assignment
             statement is evaluated and the resulting data value is
             <q>assigned</q> to the variable named on the left-hand side.
@@ -252,11 +252,12 @@ int main(){
             Pitfall: C++ will often simply try to do the assignment you
             requested without
             complaining. Note what happened in the code above in the final output.</p>
-
+            <reading-questions xml:id="rqs-bool-data">
+                <title>Reading Question</title>
     <exercise label="mc_bool">
         <statement>
 
-        <p>Q-6: Why did theBool output a value of 1 after being set to 4?</p>
+        <p>Why did theBool output a value of 1 after being set to 4?</p>
 
         </statement>
 <choices>
@@ -299,5 +300,6 @@ int main(){
 </choices>
 
     </exercise>
+</reading-questions>
     </section>
 

@@ -19,12 +19,12 @@
         <pre>// Python reference for a single integer value
 varN = 100</pre>
         
-        <figure align="center" xml:id="fig-py-reference"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.1: Python reference</caption><image source="AtomicData/Figures/python_reference.png" width="50%" alt="&quot;arrow from varN to box containing 100 object&quot;"/></figure>
+        <figure align="center" xml:id="fig-py-reference"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Python reference</caption><image source="AtomicData/python_reference.png" width="50%" alt="&quot;arrow from varN to box containing 100 object&quot;"/></figure>
         <pre>// C++ variable declaration and assignment of an integer value
 int varN = 100;</pre>
         <p>In C++ the results of running this code will look like the diagram below:</p>
         
-        <figure align="center" xml:id="fig-cpp-reference"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.2: C++ variable</caption><image source="AtomicData/Figures/cpp_var.png" width="50%" alt="&quot;Location named varN containing value of 100&quot;"/></figure>
+        <figure align="center" xml:id="fig-cpp-reference"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">C++ variable</caption><image source="AtomicData/cpp_var.png" width="50%" alt="&quot;Location named varN containing value of 100&quot;"/></figure>
         <p>In each case, when we want to output the value to the console, we use the variable name
             to do so.</p>
         <p>But, we can also identify the memory location of the variable by its address.
@@ -37,7 +37,7 @@ int varN = 100;</pre>
             way to reference the address.</p>
         <p>In Python we use <c>id</c> to reference the address,
             while in C++ we use the <em>address-of operator</em>, <c>&amp;</c>.</p>
-        <exercise ><TabNode tabname="C++" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
+      <TabNode tabname="C++" tabnode_options="{'subchapter': 'Pointers', 'chapter': 'AtomicData', 'basecourse': 'cpp4python', 'optional': '', 'optclass': '', 'tabname': 'C++'}">
 
     <program xml:id="address_cpp" interactive="activecode" language="cpp">
         <input>
@@ -69,7 +69,7 @@ def main():
 main()
         </input>
     </program>
-            </TabNode></exercise>
+            </TabNode>
         <p>In both Python and C++, variables are stored in memory locations which are dependent
             upon the run itself. If you repeatedly run the above code in either C++ or Python, you may
             see the location change.</p>
@@ -117,7 +117,7 @@ int *ptrN;
 ptrN = &amp;varN;</pre>
                 <p>The results of running this C++ code will look like the diagram below.</p>
                 
-                <figure align="center" xml:id="id3"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.3: View into memory with pointers</caption><image source="AtomicData/Figures/new_new_point2.png" width="50%" alt="image"/></figure>
+                <figure align="center" xml:id="id3"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">View into memory with pointers</caption><image source="AtomicData/new_new_point2.png" width="50%" alt="image"/></figure>
             </subsubsection>
         </subsection>
         <subsection xml:id="atomic-data_accessing-values-from-pointers">
@@ -152,61 +152,7 @@ int main( ) {
     </program>
             </blockquote>
 
-    <exercise label="mc_pntrhlp">
-        <statement>
-
-            <p>Q-4: If the lines (varN = 50;) and  (cout &lt;&lt; *ptrN &lt;&lt; endl;) were inserted into line 7-8, what would it cout?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>varPntr: 9</p>
-                </statement>
-                <feedback>
-                    <p>Not quite, the variable varN no longer equals 100 past line 7!</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>varPntr: 50</p>
-                </statement>
-                <feedback>
-                    <p>Right!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>varPntr: 150</p>
-                </statement>
-                <feedback>
-                    <p>No, the values do not add together!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>0x7ffeb9ce053c</p>
-                </statement>
-                <feedback>
-                    <p>We are dereferencing the pointer, so you would not get the address of varN. Try again!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>none of the above</p>
-                </statement>
-                <feedback>
-                    <p>One of the above is indeed correct.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
+    
             <p>Compiling and running the above code will have the program output the
                 value in varN,
                 what is in ptrN (the memory address of varN),
@@ -244,7 +190,7 @@ int main( ) {
             </blockquote>
             <p><term>This is BAD, BAD, BAD!</term></p>
             
-            <figure align="center" xml:id="id4"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2.4: dangling pointer reference</caption><image source="AtomicData/Figures/new_point_broken.png" width="50%" alt="image"/></figure>
+            <figure align="center" xml:id="id4"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Dangling pointer reference</caption><image source="AtomicData/new_point_broken.png" width="50%" alt="image"/></figure>
             <p>If your compiler does not catch that error (the one for this class may),
                 the first <c>cout</c> instruction outputs</p>
             <pre>After changing *ptrN, varN now has: 50</pre>
@@ -295,6 +241,67 @@ int main( ) {
             <p>Helpful Tip: The null pointer becomes very useful when you must test
                 the state of a pointer, such as whether the assignment to an address
                 is valid or not.</p>
+
+
+                <reading-questions xml:id="rqs-pointers">
+                    <title>Reading Question</title>
+                    
+                    <exercise label="mc_pntrhlp">
+                        <statement>
+                
+                            <p>If the lines (varN = 50;) and  (cout &lt;&lt; *ptrN &lt;&lt; endl;) were inserted into line 7-8, what would it cout?</p>
+                
+                        </statement>
+                <choices>
+                
+                            <choice>
+                                <statement>
+                                    <p>varPntr: 9</p>
+                                </statement>
+                                <feedback>
+                                    <p>Not quite, the variable varN no longer equals 100 past line 7!</p>
+                                </feedback>
+                            </choice>
+                
+                            <choice correct="yes">
+                                <statement>
+                                    <p>varPntr: 50</p>
+                                </statement>
+                                <feedback>
+                                    <p>Right!</p>
+                                </feedback>
+                            </choice>
+                
+                            <choice>
+                                <statement>
+                                    <p>varPntr: 150</p>
+                                </statement>
+                                <feedback>
+                                    <p>No, the values do not add together!</p>
+                                </feedback>
+                            </choice>
+                
+                            <choice>
+                                <statement>
+                                    <p>0x7ffeb9ce053c</p>
+                                </statement>
+                                <feedback>
+                                    <p>We are dereferencing the pointer, so you would not get the address of varN. Try again!</p>
+                                </feedback>
+                            </choice>
+                
+                            <choice>
+                                <statement>
+                                    <p>none of the above</p>
+                                </statement>
+                                <feedback>
+                                    <p>One of the above is indeed correct.</p>
+                                </feedback>
+                            </choice>
+                </choices>
+                
+                    </exercise>
+                </reading-questions> 
         </subsection>
     </section>
 

@@ -94,10 +94,7 @@ int main(){
                 catches shortly. Chances are you may create some on your own very soon too,
                 but first let's talk about each of the statements in a C++ program.</p>
 
-<exercise label="interpreterdrag">
-    <statement><p>Match Compiler and Interpreter to the correct definition.</p></statement>
-    <feedback><p>This is feedback.</p></feedback>
-<matches><match order="1"><premise>Compiler</premise><response>generally transforms code written in a high-level language into a low-level language in order to create an executable program</response></match><match order="2"><premise>Interpreter</premise><response>directly executes statements in a scripting language without requiring them to have been assembled into machine language</response></match></matches></exercise>        </subsection>
+  </subsection>
         <subsection xml:id="intro-cpp_using-headers-and-libraries">
             <title>Using headers and libraries</title>
             <p>Preprocessor directives in C++ appear as statements preceded by the hash sign <c>#</c>.
@@ -152,23 +149,7 @@ using namespace std; int main(){cout &lt;&lt; "Hello World!\n"; return 0;}
                 the kind of human-readable formatting you have become used to in Python.
                 You will likely learn to appreciate this when you are debugging.</p>
             <p>Without peeking, see if you can put the following code in the correct order.</p>
-<exercise label="pp_introcpp_order" adaptive="yes" indent="hide" language="c++"><statement>
-            <p>Correctly rearrange the code below to implement hello world in C++:</p>
-</statement>
-<blocks><block order="4">
-<cline>&amp;#x22D5include &amp;#x003Ciostream&amp;#x003E</cline>
-</block><block order="6">
-<cline>using namespace std;</cline>
-</block><block order="1">
-<cline>int main()</cline>
-<cline>{</cline>
-</block><block order="2">
-<cline>    cout &lt;&lt; "Hello World!\n";</cline>
-</block><block order="3">
-<cline>    return 0;</cline>
-</block><block order="5">
-<cline>}</cline>
-</block></blocks></exercise>        </subsection>
+       </subsection>
         <subsection xml:id="intro-cpp_comments-in-c">
             <title>Comments in C++</title>
             <p>Python and C++ both support comments that are not processed by the interpreter or compiler.</p>
@@ -243,13 +224,12 @@ int main(){
                 The input operator in C++ is <c>&gt;&gt;</c>.</p>
             <p>Here is an example that uses <c>cin</c>:</p>
 
-<exercise label="cin_user_input">
     <statement>
             <p>The active code below is an example of what getting input from the
                 user might look like. Feel free to change 12.4 to other values!</p>
 
     </statement>
-    <program xml:id="cin_user_input_editor" interactive="activecode" language="cpp">
+    <program xml:id="cin_user_input_editor" interactive="activecode" language="cpp" stdin="12.4">
         <input>
 #include &lt;iostream&gt;
 using namespace std;
@@ -257,7 +237,7 @@ using namespace std;
 int main() {
 
   //declares num as a floating point number variable
-  float num;
+  float num = 12.4; // Note: cin is not currently working in activecode
 
   // Displays this text to the console
   cout &lt;&lt; "Give me a number:" &lt;&lt; endl;
@@ -272,7 +252,6 @@ int main() {
 }
         </input>
     </program>
-</exercise>
         </subsection>
         <subsection xml:id="intro-cpp_type-declarations">
             <title>Type Declarations</title>
@@ -280,14 +259,44 @@ int main() {
                 Just like functions, all variables in C++ must be declared before use, and
                 they cannot change type. This is known as <term>static typing</term>.
                 The line <c>float num</c> essentially tells the compiler to set aside sufficient space for a floating point number,
-                and to name this memory location <c>num.</c>
+                and to name this memory location <c>num</c>.
                 Then whatever the user types in will be stored in the <c>num</c> variable.
                 Using the <c>cout</c> function, we can write instructions that will prompt the user to enter data and then
                 incorporate that data into further processing.
-                For example, in the code above, the integer input is doubled and then displayed!</p>
+                For example, in the code above, the floating point number is doubled and then displayed.</p>
             <p>We will talk more about type declarations in the section on data types, and
                 we will go into more depth on input and output later when we discuss
                 C++ streams and file handling.</p>
+                <reading-questions xml:id="rqs-firstcpp">
+                    <title>Reading Questions</title>
+                    <exercise label="interpreterdrag">
+                        <statement><p>Match Compiler and Interpreter to the correct definition.</p></statement>
+                        <feedback><p>This is feedback.</p></feedback>
+                    <matches><match order="1"><premise>Compiler</premise><response>generally transforms code written in a high-level language into a low-level language in order to create an executable program</response></match><match order="2"><premise>Interpreter</premise><response>directly executes statements in a scripting language without requiring them to have been assembled into machine language</response></match></matches></exercise>      
+
+                    <exercise label="pp_introcpp_order" adaptive="yes" indent="hide" language="c++"><statement>
+                        <p>Correctly rearrange the code below to implement hello world in C++:</p>
+            </statement>
+            <blocks><block order="4">
+            <cline>#include &lt;iostream&gt;</cline>
+            </block><block order="6">
+            <cline>using namespace std;</cline>
+            </block><block order="1">
+            <cline>int main()</cline>
+            <cline>{</cline>
+            </block><block order="2">
+            <cline>    cout &lt;&lt; "Hello World!\n";</cline>
+            </block><block order="3">
+            <cline>    return 0;</cline>
+            </block><block order="5">
+            <cline>}</cline>
+            </block></blocks></exercise> 
+
+                </reading-questions>
+
+
+
+
         </subsection>
     </section>
     
